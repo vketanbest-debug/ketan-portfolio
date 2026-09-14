@@ -1,0 +1,1 @@
+{"name":"ketan-portfolio","version":"1.0.0","private":true,"type":"module","scripts":{"dev":"vite --host 127.0.0.1 --port 5173 --strictPort","build":"vite build","preview":"vite preview --host 127.0.0.1 --port 5173 --strictPort"},"dependencies":{"gsap":"^3.13.0","animejs":"^4.1.0","three":"^0.180.0"},"devDependencies":{"vite":"^7.1.0","@21st-dev/cli":"latest"}}
