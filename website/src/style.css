@@ -103,3 +103,17 @@
 .film-play .film-label{position:absolute;left:16px;right:16px;bottom:14px;color:#fff;font-size:.625rem;pointer-events:none;text-shadow:0 1px 6px #000}
 .film-play .film-label strong{display:none}.film-play .film-label small{font-size:.75rem;font-weight:500;max-width:none;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-top:4px;line-height:1.4}
 .film-play:focus-visible{outline:2px solid var(--accent);outline-offset:-4px}
+
+/* Leadership: an editorial statement and a shared-border four-card grid. */
+.leadership>.eyebrow{margin-bottom:24px;font-weight:650;color:var(--text)}
+.leadership>h2{max-width:1120px;font-size:clamp(2.1rem,4.3vw,4rem);font-weight:650;line-height:1.12;letter-spacing:-.05em}
+.leadership-deck{max-width:840px;margin:24px 0 32px;font-size:clamp(1rem,1.7vw,1.4rem);line-height:1.5}
+.leadership-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.leadership-grid article{position:relative;padding:40px;min-height:290px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--panel);transition:background .25s}
+.leadership-number{display:block;color:var(--accent);font-size:.8125rem;font-weight:650;letter-spacing:.16em;margin-bottom:20px}
+.leadership-icon{position:absolute;right:36px;top:34px;width:40px;height:40px;color:#d2f47b;transition:transform .25s}
+.leadership-grid h3{font-size:clamp(1.5rem,2.3vw,2rem);font-weight:650;letter-spacing:-.045em;line-height:1.2;max-width:360px;margin:0 30px 20px 0}
+.leadership-grid p{font-size:1rem;line-height:1.65;max-width:470px}
+[data-theme=light] .leadership-icon{color:#56701b}
+@media(hover:hover){.leadership-grid article:hover{background:color-mix(in srgb,var(--panel) 94%,var(--text))}.leadership-grid article:hover .leadership-icon{transform:translateY(-4px)}}
+@media(max-width:760px){.leadership-grid{grid-template-columns:1fr}.leadership-grid article{padding:28px 24px;min-height:0}.leadership-icon{right:24px;top:24px;width:34px;height:34px}.leadership-grid h3{margin-right:28px}.leadership-deck{margin:20px 0 28px}.leadership-grid p{font-size:.9375rem}}

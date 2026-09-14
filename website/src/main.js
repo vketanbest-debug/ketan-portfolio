@@ -88,7 +88,16 @@ if(!isCase){
 
 document.body.insertAdjacentHTML('beforeend',`<dialog id="image-dialog" aria-label="Campaign image preview"><button class="close-dialog" autofocus aria-label="Close image preview">Close ×</button><img alt=""><p id="image-caption"></p><a class="text-link" id="original-image" target="_blank" rel="noopener">Open original image ↗</a></dialog>`);
 if(currentProject)renderProject(currentProject,projectsData,footer);
-if(!isCase)connectProjectLinks(projectsData);
+if(!isCase){
+ connectProjectLinks(projectsData);
+ const leadershipCards=[
+  ['Building teams','Led a six-person design team and brought designers, motion specialists, agencies and production partners together around a shared creative direction.','<circle cx="20" cy="20" r="14"/><circle cx="20" cy="20" r="8"/>'],
+  ['Creating systems','Built modular campaign frameworks, reusable assets and production workflows that kept creative consistent across channels and high-volume delivery.','<rect x="5" y="5" width="12" height="12" rx="3"/><rect x="23" y="5" width="12" height="12" rx="3"/><rect x="5" y="23" width="12" height="12" rx="3"/><rect x="23" y="23" width="12" height="12" rx="3"/>'],
+  ['Connecting creative to business','Partnered with growth marketers and compliance teams to turn business goals, audience needs and brand guidelines into focused campaign decisions.','<path d="M3 20h34M10 13l-7 7 7 7M30 13l7 7-7 7"/>'],
+  ['Developing people','Guided designers and production partners through briefs, creative reviews and feedback, helping the team carry ideas confidently from concept to delivery.','<path d="M8 32 32 8M12 8h20v20"/>']
+ ];
+ document.querySelector('#about').insertAdjacentHTML('afterend',`<section id="leadership" class="home-section leadership" aria-labelledby="leadership-title"><div class="eyebrow">LEADERSHIP AT SCALE</div><h2 id="leadership-title">Great creative work starts with the people and systems behind it.</h2><p class="leadership-deck">The work behind the work: bringing teams, creative processes and business goals together.</p><div class="leadership-grid">${leadershipCards.map(([title,copy,icon],i)=>`<article><span class="leadership-number">0${i+1}</span><svg class="leadership-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${icon}</svg><h3>${title}</h3><p>${copy}</p></article>`).join('')}</div></section>`);
+}
 const dialog=document.querySelector('#image-dialog');
 let opener;
 document.querySelectorAll('.zoom-image').forEach(button=>button.addEventListener('click',async()=>{
