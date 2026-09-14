@@ -116,3 +116,17 @@
 .leadership-grid p{font-size:1rem;line-height:1.65;max-width:470px}
 @media(hover:hover){.leadership-grid article:hover{background:color-mix(in srgb,var(--panel) 94%,var(--text))}.leadership-grid article:hover .leadership-icon{transform:translateY(-4px)}}
 @media(max-width:760px){.leadership-grid{grid-template-columns:1fr}.leadership-grid article{padding:28px 24px;min-height:0}.leadership-icon{right:24px;top:24px;width:34px;height:34px}.leadership-grid h3{margin-right:28px}.leadership-deck{margin:20px 0 28px}.leadership-grid p{font-size:.9375rem}}
+
+/* Career highlights follow the hero; values are supplied by the portfolio owner. */
+.portfolio-kpis{padding-top:40px;padding-bottom:40px}
+.portfolio-kpis dl{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin:0}
+.portfolio-kpis dl>div{display:flex;flex-direction:column-reverse;gap:12px;padding:8px 24px;border-left:1px solid var(--line)}
+.portfolio-kpis dl>div:first-child{padding-left:0;border-left:0}
+.portfolio-kpis dd{margin:0;font-size:clamp(2.3rem,4vw,3.8rem);font-weight:550;letter-spacing:-.055em;line-height:1.1;color:var(--text)}
+.portfolio-kpis dt{font-size:.8125rem;color:var(--muted);line-height:1.5}
+.contact-details{display:flex;flex-wrap:wrap;gap:40px 80px;margin-top:32px}
+.contact-details .eyebrow{display:block;color:var(--muted);margin-bottom:12px;font-size:.6875rem}
+.contact-details a,.contact-details p{font-size:1rem;color:var(--text);line-height:1.6}
+.contact-details a{display:inline-block}.contact-details a:hover{color:var(--accent)}
+.contact-details a>span{margin-left:16px}
+@media(max-width:760px){.portfolio-kpis{padding:28px 0}.portfolio-kpis dl{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 16px}.portfolio-kpis dl>div{padding:0 16px}.portfolio-kpis dl>div:nth-child(odd){border-left:0;padding-left:0}.portfolio-kpis dt{font-size:.75rem}.contact-details{gap:28px 40px}}

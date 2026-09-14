@@ -77,7 +77,7 @@ if(!isCase){
   {name:'MyMuse',tag:'PRODUCT-LED ADS',description:'A more personal kind of storytelling.',image:'/assets/covers/mymuse.webp',alt:'MyMuse Glow product campaign',url:'https://ketanv.wixsite.com/home/portfolio-2#comp-mryyrib6',type:'portrait-card',width:1024,height:1536},
   {name:'Pesto',tag:'SAAS / MOTION & 3D',description:'Complex products. Clear stories.',image:'/assets/covers/pesto.jpg',alt:'Pesto platform presented on a three-dimensional tablet',url:'https://ketanv.wixsite.com/home/portfolio-2#comp-mrw3kwgo',width:1920,height:1080},
   {name:'Angel One × IPL',tag:'CAMPAIGN / 2025',description:'Creative at the speed of the game.',image:'/assets/covers/ipl.webp',alt:'Angel One and Tata IPL campaign partnership artwork',url:'https://ketanv.wixsite.com/home/portfolio-2#comp-mn2xicfa',type:'ipl-card',width:2902,height:1420},
-  {name:'A study in time',tag:'CINEMATIC PRODUCT FILM',description:'The details make the difference.',image:'/assets/covers/watch.jpg',alt:'Giordano watch campaign film still',url:'https://ketanv.wixsite.com/home/portfolio-2#comp-mt9yx9ea',width:1280,height:720}
+  {name:'Product-led campaigns',tag:'PERFORMANCE / APP ACQUISITION',description:'Stocks, IPO, F&O & MTF. The product becomes the story.',image:projectsData.find(p=>p.number===2).cover.src,alt:'Angel One product-led acquisition campaign',url:'https://ketanv.wixsite.com/home/portfolio-2#comp-mown4ox0',width:1280,height:720}
  ];
  const work=document.querySelector('#work');
  work.querySelector('.featured').remove();
@@ -90,6 +90,7 @@ document.body.insertAdjacentHTML('beforeend',`<dialog id="image-dialog" aria-lab
 if(currentProject)renderProject(currentProject,projectsData,footer);
 if(!isCase){
  connectProjectLinks(projectsData);
+ document.querySelector('.home-hero').insertAdjacentHTML('afterend',`<section class="home-section portfolio-kpis" aria-label="Career highlights"><dl>${[['400+','Creative Projects'],['12+','Years of Experience'],['10M+','Impressions Reached'],['4–5%','CTR Achieved']].map(([value,label])=>`<div><dt>${label}</dt><dd>${value}</dd></div>`).join('')}</dl></section>`);
  const leadershipCards=[
   ['Building teams','Led a six-person design team and brought designers, motion specialists, agencies and production partners together around a shared creative direction.','<circle cx="20" cy="20" r="14"/><circle cx="20" cy="20" r="8"/>'],
   ['Creating systems','Built modular campaign frameworks, reusable assets and production workflows that kept creative consistent across channels and high-volume delivery.','<rect x="5" y="5" width="12" height="12" rx="3"/><rect x="23" y="5" width="12" height="12" rx="3"/><rect x="5" y="23" width="12" height="12" rx="3"/><rect x="23" y="23" width="12" height="12" rx="3"/>'],
@@ -98,6 +99,7 @@ if(!isCase){
  ];
  document.querySelector('#about').insertAdjacentHTML('afterend',`<section id="leadership" class="home-section leadership" aria-labelledby="leadership-title"><div class="eyebrow">LEADERSHIP AT SCALE</div><h2 id="leadership-title">Great creative work starts with the people and systems behind it.</h2><p class="leadership-deck">The work behind the work: bringing teams, creative processes and business goals together.</p><div class="leadership-grid">${leadershipCards.map(([title,copy,icon],i)=>`<article><span class="leadership-number">0${i+1}</span><svg class="leadership-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${icon}</svg><h3>${title}</h3><p>${copy}</p></article>`).join('')}</div></section>`);
 }
+document.querySelector('#contact .email-link').insertAdjacentHTML('afterend',`<div class="contact-details"><div><span class="eyebrow">PHONE</span><a href="tel:+919594272022">+91 95942 72022 <span aria-hidden="true">↗</span></a></div><div><span class="eyebrow">LOCATION</span><p>Mumbai, India</p></div></div>`);
 const dialog=document.querySelector('#image-dialog');
 let opener;
 document.querySelectorAll('.zoom-image').forEach(button=>button.addEventListener('click',async()=>{
