@@ -130,3 +130,19 @@
 .contact-details a{display:inline-block}.contact-details a:hover{color:var(--accent)}
 .contact-details a>span{margin-left:16px}
 @media(max-width:760px){.portfolio-kpis{padding:28px 0}.portfolio-kpis dl{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 16px}.portfolio-kpis dl>div{padding:0 16px}.portfolio-kpis dl>div:nth-child(odd){border-left:0;padding-left:0}.portfolio-kpis dt{font-size:.75rem}.contact-details{gap:28px 40px}}
+
+/* Floating navigation: existing content, portfolio tokens, scroll-aware collapse. */
+#app{padding-top:104px}
+.topbar.floating-nav{position:fixed;z-index:40;top:20px;left:50%;transform:translateX(-50%);width:min(880px,calc(100% - 40px));height:64px;margin:0;padding:0;border:1px solid var(--line);border-radius:32px;background:color-mix(in srgb,var(--canvas) 88%,transparent);backdrop-filter:blur(16px);box-shadow:0 8px 32px #0002;transition:width .4s cubic-bezier(.22,.8,.25,1),height .3s,border-radius .3s;display:block}
+.floating-nav-content{display:flex;align-items:center;justify-content:space-between;gap:24px;width:100%;height:100%;padding:8px 12px 8px 20px;opacity:1;transition:opacity .18s,transform .3s;white-space:nowrap}
+.floating-nav .identity{gap:10px;font-size:.75rem}.floating-nav .identity small{font-size:.625rem}.floating-nav .monogram{font-size:2rem}
+.topbar.floating-nav nav{gap:20px;font-size:.8125rem}.topbar.floating-nav nav>a{display:inline-flex;align-items:center;min-height:40px}
+.topbar.floating-nav nav .contact-link{padding:8px 12px;border:1px solid var(--line);border-radius:8px}.floating-nav .contact-link span{margin-left:12px}
+.floating-nav .theme-toggle{width:40px;height:40px}
+.floating-nav-toggle{position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:50%;background:transparent;color:var(--text);display:grid;place-items:center;cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .2s,transform .2s}
+.topbar.floating-nav.is-collapsed{width:48px;height:48px;border-radius:24px}
+.is-collapsed .floating-nav-content{opacity:0;visibility:hidden;transform:scale(.95);pointer-events:none}
+.is-collapsed .floating-nav-toggle{opacity:1;visibility:visible;pointer-events:auto}
+.floating-nav-toggle:hover{transform:scale(1.08)}.floating-nav-toggle:active{transform:scale(.95)}
+section[id],footer[id]{scroll-margin-top:110px}.contents{top:110px}
+@media(max-width:760px){#app{padding-top:148px}.topbar.floating-nav{top:12px;width:calc(100% - 24px);height:124px;border-radius:24px}.floating-nav-content{flex-direction:column;gap:4px;padding:10px 16px}.floating-nav .identity{align-self:flex-start}.floating-nav .identity small{display:block}.topbar.floating-nav nav{width:100%;gap:0;justify-content:space-between;font-size:.6875rem}.topbar.floating-nav nav>a:nth-child(2),.topbar.floating-nav nav>a:nth-child(3),.topbar.floating-nav nav>a:first-child{display:inline-flex}.topbar.floating-nav nav .contact-link{padding:6px 8px}.floating-nav .contact-link span{margin-left:4px}.floating-nav .theme-toggle{width:36px;height:36px}.home-hero{min-height:calc(100svh - 148px)}section[id],footer[id]{scroll-margin-top:154px}.contents{top:72px}}

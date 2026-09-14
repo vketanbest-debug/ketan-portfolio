@@ -1,4 +1,5 @@
 import './style.css';
+import {mountNavigation} from './components/ui/navigation-menu.js';
 import projectsData from './projects.json';
 import {renderProject,connectProjectLinks} from './project-page.js';
 import { mountKineticGrid } from './components/ui/kinetic-grid.js';
@@ -27,6 +28,9 @@ function applyTheme(theme){
 }
 let initialTheme='dark';try{initialTheme=localStorage.getItem('portfolio-theme')==='light'?'light':'dark';}catch{}
 applyTheme(initialTheme);
+const cleanupNavigation=mountNavigation(document.querySelector('.topbar'));
+window.addEventListener('pagehide',cleanupNavigation,{once:true});
+if(import.meta.hot)import.meta.hot.dispose(cleanupNavigation);
 themeToggle.addEventListener('click',()=>{const next=document.documentElement.dataset.theme==='light'?'dark':'light';applyTheme(next);try{localStorage.setItem('portfolio-theme',next);}catch{}});
 if(isCase){
  const cover=document.querySelector('.hero-figure');
