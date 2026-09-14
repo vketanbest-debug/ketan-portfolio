@@ -15,7 +15,7 @@ export function mountKineticGrid(host) {
 
   function draw(now) {
     ctx.clearRect(0, 0, width, height);
-    ctx.fillStyle = isLight()?'rgba(20,25,35,.07)':'rgba(255,255,255,.05)';
+    ctx.fillStyle = isLight()?'#ff6363':'rgba(255,255,255,.05)';
     for (let x = 14; x < width; x += 28) for (let y = 14; y < height; y += 28) {
       ctx.beginPath(); ctx.arc(x,y,.7,0,Math.PI*2); ctx.fill();
     }
