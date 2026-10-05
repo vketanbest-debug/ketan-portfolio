@@ -34,3 +34,7 @@ Run `npm run build` and `node scripts/verify.mjs` to check all eleven routes and
 - Check the first case study’s narrative, role attribution and reported reach.
 - Review the chapter navigation and full-size images on desktop and phone.
 - Review the nine additional project narratives and galleries, now created following approval to continue.
+
+## Hero background
+
+The Hero uses the supplied SonarGrid adapted to this vanilla JavaScript site in src/components/ui/sonar-grid.js. Shared styles remain in src/style.css. It supports ambient and pointer-triggered rings, the current accent color, reduced motion, and pausing off-screen or in hidden tabs. No React, Tailwind, TypeScript, or Motion dependency is needed for this adaptation; the supplied Motion demo is not mounted.

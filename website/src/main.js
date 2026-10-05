@@ -2,7 +2,7 @@ import './style.css';
 import {mountNavigation} from './components/ui/navigation-menu.js';
 import projectsData from './projects.json';
 import {renderProject,connectProjectLinks} from './project-page.js';
-import { mountKineticGrid } from './components/ui/kinetic-grid.js';
+import { mountSonarGrid } from './components/ui/sonar-grid.js';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
@@ -50,7 +50,7 @@ if(hero){
  heroContent.className='hero-content';
  heroContent.append(...hero.children);
  hero.append(heroContent);
- const cleanupGrid=mountKineticGrid(hero);
+ const cleanupGrid=mountSonarGrid(hero);
  window.addEventListener('pagehide',cleanupGrid,{once:true});
  if(import.meta.hot)import.meta.hot.dispose(cleanupGrid);
 }
