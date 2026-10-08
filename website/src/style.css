@@ -78,24 +78,21 @@
 .case-facts{margin:0;border-left:1px solid var(--line);padding:8px 0 8px 24px;display:flex;flex-direction:column;justify-content:space-between;gap:28px;font-size:.6875rem;letter-spacing:.09em}
 .case-facts dt{color:var(--muted);margin-bottom:10px}.case-facts dd{margin:0;line-height:1.7}
 .case-hero .case-cover{margin:56px 0 0;border-radius:16px;max-width:none}
-.case-hero .case-cover img{aspect-ratio:2.4;object-fit:cover;object-position:center 48%}
+.case-hero .case-cover img{display:block;width:100%;max-width:100%;height:auto;aspect-ratio:2.4;object-fit:cover;object-position:center}
 .case-hero .case-cover figcaption{padding:16px 20px;border:0}
 @media(max-width:1100px){.case-hero{padding:32px 32px 0}.case-intro-grid{grid-template-columns:minmax(0,1fr) 200px;gap:32px}}
-@media(max-width:760px){.case-hero{padding:24px 20px 0}.case-index{margin:24px 0}.case-intro-grid{grid-template-columns:1fr;gap:28px}.case-intro-grid h1{font-size:clamp(2.3rem,8.5vw,3.5rem)}.case-intro-grid .hero-deck{font-size:1rem}.case-facts{border-left:0;border-top:1px solid var(--line);padding:20px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:20px}.case-facts>div:last-child{grid-column:1/-1}.case-hero .case-cover{margin:32px 0 24px;border-radius:12px}.case-hero .case-cover img{aspect-ratio:1.5;object-fit:contain}.case-hero .case-cover figcaption{gap:12px;font-size:.55rem;padding:12px}}
+@media(max-width:760px){.case-hero{padding:24px 20px 0}.case-index{margin:24px 0}.case-intro-grid{grid-template-columns:1fr;gap:28px}.case-intro-grid h1{font-size:clamp(2.3rem,8.5vw,3.5rem)}.case-intro-grid .hero-deck{font-size:1rem}.case-facts{border-left:0;border-top:1px solid var(--line);padding:20px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:20px}.case-facts>div:last-child{grid-column:1/-1}.case-hero .case-cover{margin:32px 0 24px;border-radius:12px}.case-hero .case-cover img{aspect-ratio:1.5}.case-hero .case-cover figcaption{gap:12px;font-size:.55rem;padding:12px}}
 
 /* Project-specific galleries and lightweight, click-to-load films. */
 .project-story,.project-process{max-width:760px;margin-left:auto}.project-story p+p,.project-process p+p{margin-top:20px}.project-process h3{font-size:1.15rem;line-height:1.4;margin:36px 0 16px;padding-top:24px;border-top:1px solid var(--line)}.project-process h3:first-child{margin-top:0}
 .project-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:start}.project-gallery .landscape{grid-column:1/-1}.project-gallery .zoom-image{background:var(--panel)}.project-gallery img{height:auto;width:100%}
 .gallery-product-led-campaigns .landscape,.gallery-youtube-education .landscape,.gallery-angel-one-ipl .landscape{grid-column:auto}
 .gallery-heading{margin-top:48px}
+.project-insight ul{margin:20px 0 0;padding-left:24px;color:var(--muted);line-height:1.7;list-style:disc}.project-insight li+li{margin-top:12px}.project-insight li::marker{color:var(--accent)}
 .project-gallery.social-media-gallery,.project-gallery.gallery-angel-one-brand-films{grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(8px,2vw,24px)}
 .gallery-angel-one-brand-films .landscape{grid-column:auto}
-.project-mymuse .case-cover img{height:auto;aspect-ratio:16/9;object-fit:contain;background:transparent}.project-angel-one-ipl .case-cover img{object-fit:contain;background:#071a27}.project-watch-promo .case-cover img,.project-pesto .case-cover img{aspect-ratio:16/9;object-fit:contain}.project-banking-events .case-cover img{aspect-ratio:2;object-position:center}
 .project-films{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 24px}.film-player{aspect-ratio:16/9;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--panel)}.film-play{width:100%;height:100%;display:flex;align-items:center;gap:24px;text-align:left;padding:24px;border:0;background:radial-gradient(ellipse at top right,#68677822,transparent 70%);color:var(--text);cursor:pointer}.film-play>span:last-child{font-size:.75rem;color:var(--muted)}.film-play strong{display:block;font-size:1.7rem;color:var(--text);margin:10px 0}.film-play small{font-size:.75rem}.film-play-icon{display:grid;place-items:center;flex-shrink:0;width:48px;height:48px;border:1px solid var(--line);border-radius:50%;transition:transform .2s}.film-play:hover .film-play-icon{transform:scale(1.1);border-color:var(--accent)}.film-player iframe{width:100%;height:100%;border:0}.film-card .text-link{margin-top:14px}.next-project{display:block;padding:48px 0;border-bottom:1px solid var(--line)}.next-project>.eyebrow{color:var(--muted)}.next-project h2{margin-top:20px;font-size:clamp(1.8rem,3vw,3rem)}.next-project h2>span{color:var(--accent)}
-@media(max-width:760px){.project-gallery,.project-films{grid-template-columns:1fr;gap:20px}.project-gallery .landscape{grid-column:auto}.project-banking-events .case-cover img{aspect-ratio:1.5}.film-play{padding:24px}.project-process h3{margin-top:28px}.next-project{padding:36px 0}}
-/* Keep text and product details inside supplied cover artwork visible. */
-.case-hero[class*="project-"] .case-cover img{object-fit:contain}
-.project-banking-events .case-cover img{aspect-ratio:3/2}
+@media(max-width:760px){.project-gallery,.project-films{grid-template-columns:1fr;gap:20px}.project-gallery .landscape{grid-column:auto}.film-play{padding:24px}.project-process h3{margin-top:28px}.next-project{padding:36px 0}}
 .film-play small{display:block;line-height:1.5;max-width:260px}
 
 /* Every film has a visible poster; the iframe still loads only on play. */

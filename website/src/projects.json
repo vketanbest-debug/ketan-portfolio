@@ -912,12 +912,14 @@
     ],
     "deck": "Owned the end-to-end creative development pipeline for assets supporting a major nationwide campaign targeting millions of active retail investors.",
     "cover": {
-      "src": "/assets/projects/angel-one-brand-films/007-asset.jpg",
-      "width": 1280,
-      "height": 720,
-      "number": 2
+      "src": "/assets/projects/angel-one-brand-films/001_cover.webp",
+      "width": 1708,
+      "height": 960,
+      "number": 1
     },
     "gallery": "Film Thumbnails.",
+    "galleryDescription": "Delivered iterative thumbnail variations for creative testing, resulting in a design layout that outperformed the campaign benchmark by 23%.",
+    "socialMediaDescription": "Scaled the brand film and promoted campaign through social media too by incorporating key platform offerings.",
     "socialMedia": [
       {
         "src": "/assets/projects/angel-one-brand-films/009-asset.jpg",
@@ -957,12 +959,6 @@
     ],
     "images": [
       {
-        "src": "/assets/projects/angel-one-brand-films/007-asset.jpg",
-        "width": 750,
-        "height": 375,
-        "number": 7
-      },
-      {
         "src": "/assets/projects/angel-one-brand-films/004-asset.jpg",
         "width": 1280,
         "height": 720,
@@ -979,16 +975,29 @@
         "width": 1280,
         "height": 720,
         "number": 6
-      },
-      {
-        "src": "/assets/projects/angel-one-brand-films/007-asset.jpg",
-        "width": 750,
-        "height": 375,
-        "number": 7
       }
     ],
     "challenge": [
       "Following its rebrand from Angel Broking, Angel One needed to dismantle the perception that stock trading was reserved exclusively for financial experts. The objective was to reposition the platform as intuitive and accessible, reassuring first-time investors that they could start trading quickly and confidently without needing prior market expertise"
+    ],
+    "insight": [
+      {
+        "title": "Target Audience",
+        "text": "Gen Z and millennial investors, particularly in Tier-2 and Tier-3 cities across India."
+      },
+      {
+        "title": "Community Focus",
+        "text": "It frames Angel One's client base as an active community (\"Smart Republic\") of brand ambassadors who make technology-driven investment choices."
+      },
+      {
+        "title": "Core Highlights",
+        "text": "The campaign promotes three main platform advantages:",
+        "highlights": [
+          "Quick and paperless Demat account opening.",
+          "Smart stock recommendations and research tools (such as ARQ Prime).",
+          "Affordable pricing structures, including ₹0 brokerage for cash delivery equity and ₹20 per order for F&O, intraday, and currency segments."
+        ]
+      }
     ],
     "process": [
       "• Agency Collaboration",
