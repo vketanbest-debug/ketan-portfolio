@@ -918,6 +918,26 @@
       "number": 2
     },
     "gallery": "Film Thumbnails.",
+    "socialMedia": [
+      {
+        "src": "/assets/projects/angel-one-brand-films/009-asset.jpg",
+        "width": 1200,
+        "height": 1200,
+        "number": 9
+      },
+      {
+        "src": "/assets/projects/angel-one-brand-films/010-asset.jpg",
+        "width": 1200,
+        "height": 1200,
+        "number": 10
+      },
+      {
+        "src": "/assets/projects/angel-one-brand-films/011-asset.jpg",
+        "width": 1200,
+        "height": 1200,
+        "number": 11
+      }
+    ],
     "challengeTitle": "Change the perception of who investing is for.",
     "roleTitle": "Connecting agencies, brand and production.",
     "outcomeTitle": "Three films. One connected story.",
