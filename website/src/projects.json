@@ -912,12 +912,12 @@
     ],
     "deck": "Relatable stories that make investing feel accessible, connecting product benefits with a consistent brand narrative across three flagship films.",
     "cover": {
-      "src": "/assets/projects/angel-one-brand-films/002-asset.jpg",
+      "src": "/assets/projects/angel-one-brand-films/007-asset.jpg",
       "width": 1280,
       "height": 720,
       "number": 2
     },
-    "gallery": "Brand storytelling, across screens.",
+    "gallery": "Film Thumbnails.",
     "challengeTitle": "Change the perception of who investing is for.",
     "roleTitle": "Connecting agencies, brand and production.",
     "outcomeTitle": "Three films. One connected story.",
@@ -937,16 +937,10 @@
     ],
     "images": [
       {
-        "src": "/assets/projects/angel-one-brand-films/002-asset.jpg",
-        "width": 1280,
-        "height": 720,
-        "number": 2
-      },
-      {
-        "src": "/assets/projects/angel-one-brand-films/003-asset.jpg",
-        "width": 1280,
-        "height": 720,
-        "number": 3
+        "src": "/assets/projects/angel-one-brand-films/007-asset.jpg",
+        "width": 750,
+        "height": 375,
+        "number": 7
       },
       {
         "src": "/assets/projects/angel-one-brand-films/004-asset.jpg",
@@ -971,12 +965,6 @@
         "width": 750,
         "height": 375,
         "number": 7
-      },
-      {
-        "src": "/assets/projects/angel-one-brand-films/008-asset.jpg",
-        "width": 1280,
-        "height": 720,
-        "number": 8
       }
     ],
     "challenge": [
