@@ -87,7 +87,7 @@
 .project-story,.project-process{max-width:760px;margin-left:auto}.project-story p+p,.project-process p+p{margin-top:20px}.project-process h3{font-size:1.15rem;line-height:1.4;margin:36px 0 16px;padding-top:24px;border-top:1px solid var(--line)}.project-process h3:first-child{margin-top:0}
 .project-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:start}.project-gallery .landscape{grid-column:1/-1}.project-gallery .zoom-image{background:var(--panel)}.project-gallery img{height:auto;width:100%}
 .gallery-product-led-campaigns .landscape,.gallery-youtube-education .landscape,.gallery-angel-one-ipl .landscape{grid-column:auto}
-.gallery-subheading{margin:48px 0 24px;font-size:clamp(1.4rem,2.5vw,2rem);line-height:1.2}
+.gallery-heading{margin-top:48px}
 .project-gallery.social-media-gallery,.project-gallery.gallery-angel-one-brand-films{grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(8px,2vw,24px)}
 .gallery-angel-one-brand-films .landscape{grid-column:auto}
 .project-mymuse .case-cover img{height:auto;aspect-ratio:16/9;object-fit:contain;background:transparent}.project-angel-one-ipl .case-cover img{object-fit:contain;background:#071a27}.project-watch-promo .case-cover img,.project-pesto .case-cover img{aspect-ratio:16/9;object-fit:contain}.project-banking-events .case-cover img{aspect-ratio:2;object-position:center}
