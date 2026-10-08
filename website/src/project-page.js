@@ -1,3 +1,5 @@
+import { mountGalleryModalAccordion } from './components/ui/gallery-modal-accordion.js';
+
 const escape = value => String(value).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 const paragraphs = items => items.map(text => text.startsWith('•') ? `<h3>${escape(text.slice(1).trim())}</h3>` : `<p>${escape(text)}</p>`).join('');
 export function renderProject(p, projects, footer) {
@@ -15,6 +17,11 @@ export function renderProject(p, projects, footer) {
  ${p.videos.length?section('films',p.number===7?'VIDEO LIBRARY':'FILMS & MOTION',p.number===7?'Watch the explanations come to life.':'See the work in motion.',`<div class="project-films">${p.videos.map((video,i)=>`<article class="film-card"><div class="film-player" data-video="${escape(video.video_id)}"><button class="film-play" aria-label="Play ${escape(p.client)} film ${i+1}"><img class="film-thumbnail" src="${escape(video.thumbnail||`https://i.ytimg.com/vi/${video.video_id}/hqdefault.jpg`)}" width="480" height="360" alt="" loading="lazy" decoding="async"><span class="film-play-icon" aria-hidden="true">▶</span><span class="film-label">${escape(p.client)}<strong>${p.number===7?'Episode':'Film'} ${String(i+1).padStart(2,'0')}</strong><small>${escape(video.title||'Play film')}</small></span></button></div><a class="text-link" href="${escape(video.url)}" target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a></article>`).join('')}</div>`):''}
  ${section('outcome','THE OUTCOME',p.outcomeTitle,`<div class="project-story">${paragraphs(p.outcome)}</div><p class="archive-note">Project results are reported in the original portfolio documentation.</p><div class="skill-tags">${p.skills.map(t=>`<span>${escape(t)}</span>`).join('')}</div>`)}
  <a class="next-project" href="/work/${next.slug}/"><span class="eyebrow">NEXT CASE STUDY</span><h2>${escape(next.title)} <span>↗</span></h2></a></div>${footer}`;
+ if(p.slug==='mymuse'){
+  const cleanupGallery=mountGalleryModalAccordion(document.querySelector('.gallery-mymuse'));
+  window.addEventListener('pagehide',event=>{if(!event.persisted)cleanupGallery();},{once:true});
+  if(import.meta.hot)import.meta.hot.dispose(cleanupGallery);
+ }
  document.querySelector('.skip').href='#overview';
  document.querySelector('.footer-bottom a[href="#main"]').href='#overview';
  document.querySelectorAll('.film-play').forEach(button=>button.addEventListener('click',()=>{

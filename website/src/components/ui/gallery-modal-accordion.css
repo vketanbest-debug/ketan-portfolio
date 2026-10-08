@@ -1,0 +1,22 @@
+.project-gallery.gallery-accordion{display:flex;gap:8px;align-items:stretch;width:100%;height:400px;padding:12px 0 20px}
+.gallery-accordion .media{flex:1 1 0;min-width:0;margin:0;transition:flex-grow .3s ease-in-out}
+.gallery-accordion .media.is-active{flex-grow:6}
+.gallery-accordion .accordion-panel{position:relative;display:block;width:100%;height:100%;padding:0;border:0;border-radius:16px;overflow:hidden;background:var(--panel);cursor:zoom-in;transition:transform .15s}
+.gallery-accordion .accordion-panel:active{transform:scale(.97)}
+.gallery-accordion .accordion-panel:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.gallery-accordion .accordion-panel img{width:100%;height:100%;object-fit:cover}
+.gallery-accordion .zoom-hint{opacity:0;transition:opacity .2s}
+.gallery-accordion .is-active .zoom-hint{opacity:1}
+dialog.accordion-modal{width:100%;max-width:none;height:100%;max-height:none;margin:0;padding:24px;border:0;border-radius:0;background:transparent;overflow:auto;color:var(--text)}
+.accordion-modal[open]{display:grid;place-items:center}
+.accordion-modal::backdrop{background:#0009;backdrop-filter:blur(14px)}
+.accordion-modal-card{position:relative;width:min(760px,100%);border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--panel);box-shadow:0 24px 100px #0006;transform-origin:top left}
+.accordion-modal-card>img{display:block;width:100%;height:min(68dvh,720px);max-height:none;object-fit:contain;background:var(--panel)}
+.accordion-close{position:absolute;top:12px;right:12px;z-index:1;min-height:44px;padding:10px 16px;border:1px solid #ffffff40;border-radius:24px;background:#111c;color:white;cursor:pointer;backdrop-filter:blur(8px)}
+.accordion-modal-caption{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px;background:var(--panel)}
+.accordion-modal-caption .eyebrow{font-size:.625rem;color:var(--muted)}
+.accordion-modal-caption p{margin:6px 0 0;font-size:.875rem;line-height:1.5;color:var(--text)}
+.accordion-modal-controls{display:flex;gap:8px}
+.accordion-modal-controls button{width:44px;height:44px;border:1px solid var(--line);border-radius:50%;color:var(--text);background:var(--canvas);cursor:pointer}
+@media(max-width:760px){.project-gallery.gallery-accordion{height:300px;gap:5px}.gallery-accordion .media.is-active{flex-grow:8}.gallery-accordion .accordion-panel{border-radius:10px}.gallery-accordion .zoom-hint{right:8px;bottom:8px}.accordion-modal{padding:12px!important}.accordion-modal-caption{padding:16px;gap:8px}.accordion-modal-card>img{height:65dvh}}
+@media(prefers-reduced-motion:reduce){.gallery-accordion .media,.gallery-accordion .accordion-panel,.gallery-accordion .zoom-hint{transition:none}}

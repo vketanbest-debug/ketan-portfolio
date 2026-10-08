@@ -507,9 +507,9 @@
     ],
     "deck": "A cohesive visual world for product launches, built through photography, CGI and motion with emotion and considered product design at its centre.",
     "cover": {
-      "src": "/assets/projects/mymuse/004-asset.webp",
-      "width": 1024,
-      "height": 1536,
+      "src": "/assets/projects/mymuse/004-Cover.webp",
+      "width": 2560,
+      "height": 1440,
       "number": 4
     },
     "gallery": "A visual language for every launch.",
@@ -603,6 +603,18 @@
         "component_id": "comp-mryzp8tm",
         "original_url": "https://youtu.be/QmsYs8K6Bcc",
         "thumbnail": "/assets/video-thumbnails/QmsYs8K6Bcc.jpg"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=N-dGBe1qW40",
+        "video_id": "N-dGBe1qW40",
+        "title": "MyMuse product film",
+        "original_url": "https://youtu.be/N-dGBe1qW40"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=wyw3MeYGRpk",
+        "video_id": "wyw3MeYGRpk",
+        "title": "MyMuse product film",
+        "original_url": "https://youtu.be/wyw3MeYGRpk"
       }
     ],
     "sourceId": "comp-mryyrib6"
