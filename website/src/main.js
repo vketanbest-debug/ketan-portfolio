@@ -3,6 +3,7 @@ import {mountNavigation} from './components/ui/navigation-menu.js';
 import projectsData from './projects.json';
 import {renderProject,connectProjectLinks} from './project-page.js';
 import { mountSonarGrid } from './components/ui/sonar-grid.js';
+import { mountBrandSlider } from './components/ui/brand-slider.js';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
@@ -81,6 +82,7 @@ if(!isCase){
   {name:'MyMuse',tag:'PRODUCT-LED ADS',description:'A more personal kind of storytelling.',image:'/assets/covers/mymuse.webp',alt:'MyMuse Glow product campaign',url:'https://ketanv.wixsite.com/home/portfolio-2#comp-mryyrib6',type:'portrait-card',width:1024,height:1536},
   {name:'Pesto',tag:'SAAS / MOTION & 3D',description:'Complex products. Clear stories.',image:'/assets/covers/pesto.jpg',alt:'Pesto platform presented on a three-dimensional tablet',url:'https://ketanv.wixsite.com/home/portfolio-2#comp-mrw3kwgo',width:1920,height:1080},
   {name:'Angel One × IPL',tag:'CAMPAIGN / 2025',description:'Creative at the speed of the game.',image:'/assets/covers/ipl.webp',alt:'Angel One and Tata IPL campaign partnership artwork',url:'https://ketanv.wixsite.com/home/portfolio-2#comp-mn2xicfa',type:'ipl-card',width:2902,height:1420},
+  {name:'Angel One brand films',tag:'BRAND STORYTELLING / TVC',description:'The Smart Republic. A nationwide brand story.',image:projectsData.find(p=>p.slug==='angel-one-brand-films').cover.src,alt:'Angel One The Smart Republic brand film campaign',url:'https://ketanv.wixsite.com/home/portfolio-2#comp-mp0xl8cx',width:1708,height:960},
   {name:'Product-led campaigns',tag:'PERFORMANCE / APP ACQUISITION',description:'Stocks, IPO, F&O & MTF. The product becomes the story.',image:projectsData.find(p=>p.number===2).cover.src,alt:'Angel One product-led acquisition campaign',url:'https://ketanv.wixsite.com/home/portfolio-2#comp-mown4ox0',width:1280,height:720}
  ];
  const work=document.querySelector('#work');
@@ -94,6 +96,26 @@ document.body.insertAdjacentHTML('beforeend',`<dialog id="image-dialog" aria-lab
 if(currentProject)renderProject(currentProject,projectsData,footer);
 if(!isCase){
  connectProjectLinks(projectsData);
+ const brands=[
+  ['Angel One','AO.webp',1999,466],
+  ['HDFC Bank','HDFC-Bank-logo copy.webp',3784,1079],
+  ['ICICI Bank','icici.webp',1280,258],
+  ['Cipla','cipla.webp',1422,493],
+  ['Maersk','maersk.webp',922,357,'detailed'],
+  ['Toyota','toyo.webp',922,357,'white'],
+  ['PlayStation','playstation.webp',1288,357,'white'],
+  ['MyMuse','mymuse.webp',765,364,'white'],
+  ['MoneyGram','moneygram.webp',738,243],
+  ['Yes Bank','yesbank.webp',922,357],
+  ['Piramal Realty','piramal.webp',400,400],
+  ['Palava','palava.webp',304,96],
+  ['ThinkMarkets','thinkmarket.webp',800,131,'detailed'],
+  ['Ashoka Buildcon','ashoka.webp',676,295,'paper'],
+  ['XYXX','xyxx.webp',614,196,'reverse']
+ ];
+ const cleanupBrands=mountBrandSlider(document.querySelector('.home-hero'),brands);
+ window.addEventListener('pagehide',cleanupBrands,{once:true});
+ if(import.meta.hot)import.meta.hot.dispose(cleanupBrands);
  document.querySelector('.home-hero').insertAdjacentHTML('afterend',`<section class="home-section portfolio-kpis" aria-label="Career highlights"><dl>${[['400+','Creative Projects'],['12+','Years of Experience'],['10M+','Impressions Reached'],['4–5%','CTR Achieved']].map(([value,label])=>`<div><dt>${label}</dt><dd>${value}</dd></div>`).join('')}</dl></section>`);
  const leadershipCards=[
   ['Building teams','Led a six-person design team and brought designers, motion specialists, agencies and production partners together around a shared creative direction.','<circle cx="20" cy="20" r="14"/><circle cx="20" cy="20" r="8"/>'],
