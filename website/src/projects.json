@@ -11,10 +11,10 @@
     ],
     "deck": "The product becomes the story. Turning real app interfaces and trading features into acquisition campaigns across Meta, Google and YouTube.",
     "cover": {
-      "src": "/assets/projects/product-led-campaigns/002-asset.jpg",
-      "width": 1280,
-      "height": 720,
-      "number": 2
+      "src": "/assets/projects/product-led-campaigns/020-asset.webp",
+      "width": 1920,
+      "height": 1331,
+      "number": 20
     },
     "gallery": "Product stories, built for the feed.",
     "challengeTitle": "Show the value. Earn the download.",
@@ -118,6 +118,12 @@
         "width": 1280,
         "height": 720,
         "number": 18
+      },
+      {
+        "src": "/assets/projects/product-led-campaigns/020-asset.webp",
+        "width": 1920,
+        "height": 1331,
+        "number": 20
       }
     ],
     "challenge": [
@@ -199,9 +205,9 @@
     ],
     "deck": "A full season of cricket-inspired creative, connecting stadium experiences with broadcast, social and performance marketing.",
     "cover": {
-      "src": "/assets/projects/angel-one-ipl/001-AOxIPL.webp",
-      "width": 2902,
-      "height": 1420,
+      "src": "/assets/projects/angel-one-ipl/ipl-cover.webp",
+      "width": 2486,
+      "height": 800,
       "number": 1
     },
     "gallery": "One season. Many ways to show up.",
@@ -224,9 +230,9 @@
     ],
     "images": [
       {
-        "src": "/assets/projects/angel-one-ipl/001-AOxIPL.webp",
-        "width": 2902,
-        "height": 1420,
+        "src": "/assets/projects/angel-one-ipl/ipl-cover.webp",
+        "width": 2486,
+        "height": 800,
         "number": 1
       },
       {

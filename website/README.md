@@ -38,3 +38,7 @@ Run `npm run build` and `node scripts/verify.mjs` to check all eleven routes and
 ## Hero background
 
 The Hero uses the supplied SonarGrid adapted to this vanilla JavaScript site in src/components/ui/sonar-grid.js. Shared styles remain in src/style.css. It supports ambient and pointer-triggered rings, the current accent color, reduced motion, and pausing off-screen or in hidden tabs. No React, Tailwind, TypeScript, or Motion dependency is needed for this adaptation; the supplied Motion demo is not mounted.
+
+## Replacing the IPL cover
+
+Replace `Portfolio Assets/03 - Angel One x IPL - Ad Campaign 2025/images/ipl cover.webp` using the same filename. While `npm run dev` is running, the image is copied into the public assets and the browser refreshes automatically. Both the homepage IPL thumbnail and the IPL case-study cover use `/assets/projects/angel-one-ipl/ipl-cover.webp`. No code edits are needed. Local production builds also refresh this copy. To update the published website, include the updated public asset in the next build and deployment; hosted builds use that copy when the local source archive is unavailable.
