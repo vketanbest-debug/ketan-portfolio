@@ -10,9 +10,9 @@ Install with `npm ci`, start with `npm run dev`, and open http://127.0.0.1:5173/
 
 ## Editing
 
-Content and interactions: `src/main.js`. Shared styling and responsive rules: `src/style.css`. Optional Three.js interaction: `src/shape.js`. Source assets are preserved outside this folder. The website uses copies in `public/assets`. See `DESIGN-SYSTEM.md` for the editorial direction, tokens, structure and source boundaries.
+Content and interactions: `src/main.js`. Shared styling and responsive rules: `src/style.css`. Playground Spline integration: `src/shape.js`. Source assets are preserved outside this folder. The website uses copies in `public/assets`. See `DESIGN-SYSTEM.md` for the editorial direction, tokens, structure and source boundaries.
 
-GSAP is loaded for entry and scroll interactions. Anime.js loads when a campaign image is opened. Three.js loads only after Explore in 3D is clicked and renders on pointer input or button activation. Reduced-motion preferences disable entry motion and pointer-driven 3D rotation.
+GSAP is loaded for entry and scroll interactions. Anime.js loads when a campaign image is opened. Playground uses the supplied Spline scene and pinned viewer version 2.0.111, loaded as the card approaches the viewport. Update `sceneUrl` in `src/shape.js` to replace the scene. The card adapts to desktop and mobile, with loading feedback and an unavailable message if the external viewer or scene fails to load. The integration fits the camera zoom before revealing the scene and refits it when the card resizes; the zoom is calibrated to this room and should be reviewed when replacing the scene or upgrading the pinned viewer. Scene interactions and motion are authored in Spline; reduced-motion preferences disable the portfolio's entry motion.
 
 ## 21st.dev
 
