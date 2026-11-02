@@ -117,7 +117,7 @@ if(!isCase){
  const cleanupBrands=mountBrandSlider(document.querySelector('.home-hero'),brands);
  window.addEventListener('pagehide',cleanupBrands,{once:true});
  if(import.meta.hot)import.meta.hot.dispose(cleanupBrands);
- document.querySelector('.home-hero').insertAdjacentHTML('afterend',`<section class="home-section portfolio-kpis" aria-label="Career highlights"><dl>${[['400+','Creative Projects'],['12+','Years of Experience'],['10M+','Impressions Reached'],['4–5%','CTR Achieved']].map(([value,label])=>`<div><dt>${label}</dt><dd>${value}</dd></div>`).join('')}</dl></section>`);
+ document.querySelector('.home-hero').insertAdjacentHTML('afterend',`<section class="home-section portfolio-kpis" aria-labelledby="impact-title"><header class="portfolio-kpis-heading"><h2 id="impact-title">THE IMPACT</h2><p>for Brands and business</p></header><dl>${[['200+','Creative Projects'],['12+','Years of Experience'],['10M+','Impressions Reached'],['4–5%','Avg. CTR Per Campaign']].map(([value,label])=>`<div><dt>${label}</dt><dd>${value}</dd></div>`).join('')}</dl></section>`);
  const leadershipCards=[
   ['Building teams','Led a six-person design team and brought designers, motion specialists, agencies and production partners together around a shared creative direction.','<circle cx="20" cy="20" r="14"/><circle cx="20" cy="20" r="8"/>'],
   ['Creating systems','Built modular campaign frameworks, reusable assets and production workflows that kept creative consistent across channels and high-volume delivery.','<rect x="5" y="5" width="12" height="12" rx="3"/><rect x="23" y="5" width="12" height="12" rx="3"/><rect x="5" y="23" width="12" height="12" rx="3"/><rect x="23" y="23" width="12" height="12" rx="3"/>'],
@@ -141,6 +141,7 @@ gsap.matchMedia().add('(prefers-reduced-motion: no-preference)',()=>{
  gsap.from('h1',{y:24,autoAlpha:0,duration:.75,ease:'power2.out',clearProps:'all'});
  document.querySelectorAll('.chapter-head,.about-grid,.timeline article,.approach-grid article').forEach(el=>gsap.from(el,{y:20,autoAlpha:0,duration:.65,ease:'power2.out',clearProps:'all',scrollTrigger:{trigger:el,start:'top 92%',once:true}}));
  if(!isCase){
+  gsap.from('.portfolio-kpis-heading,.portfolio-kpis dl>div',{y:12,opacity:0,duration:.55,stagger:.07,ease:'power2.out',clearProps:'all',scrollTrigger:{trigger:'.portfolio-kpis',start:'top 88%',once:true}});
   gsap.from('.hero-copy>.eyebrow,.hero-copy>p,.hero-copy>.button,.hero-note',{y:12,opacity:0,duration:.6,stagger:.09,delay:.15,ease:'power2.out',clearProps:'all'});
   ScrollTrigger.batch('.bento-card',{start:'top 96%',once:true,onEnter:cards=>gsap.from(cards,{y:28,opacity:.35,duration:.7,stagger:.09,ease:'power2.out',clearProps:'all'})});
   gsap.from('#contact h2',{y:20,opacity:0,duration:.7,clearProps:'all',scrollTrigger:{trigger:'#contact',start:'top 85%',once:true}});

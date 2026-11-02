@@ -19,6 +19,8 @@ Inter 400–650 for display, headings and body; Georgia italic for one expressiv
 Unique URL: /work/angel-one-for-everyone/. Overview → challenge → role → creative system → campaign in the wild → social and digital → impact. Sticky left navigation on desktop; sticky horizontally scrollable navigation on mobile. Active section and reading progress follow actual document position. Full-size images open in a keyboard-accessible native dialog with captions.
 
 ## Motion and performance
+
+The homepage impact strip uses a centered 14px label and 28px supporting line, with 16px between them and 48px before the metrics (32px on mobile). Metrics share a 16px-radius, hairline-bordered container: four equal columns on desktop, two on mobile. Cells use at least 24px horizontal padding, 32px vertical padding, 8px between value and label, and 32–38px numerals. Hover adds a restrained surface tint and a 3px coral numeral lift; a short staggered GSAP reveal runs once on entry. Reduced-motion preferences disable both movements. KPI values and labels follow the owner's supplied reference.
 GSAP provides short entry reveals and scroll-aware chapter feedback. Anime.js animates image-dialog entry. Playground embeds the owner-supplied Spline scene using viewer version 2.0.111, fetched near the viewport and sized within the responsive card. Camera zoom is fitted before the scene is revealed and on card resize so the room stays fully visible; motion is controlled in Spline. No scroll hijacking or autoplay video. Respect reduced motion in portfolio animations. Images have dimensions and below-fold images are lazy-loaded. Website images are local, with no Wix image dependency.
 
 ## Source and review boundaries
